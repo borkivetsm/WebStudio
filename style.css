@@ -715,6 +715,29 @@
     font-size: 16px;
     font-weight: 400;
   }
+
+  .product-trumb {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-action {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    background-color: rgba(33, 150, 243, 0.90);;
+    color: var(--main-title);
+    width: 100%;
+    padding: 63px 24px;
+    opacity: 0;
+  }
+
+  .portfolio-link:hover .product-action {
+    opacity: 1;
+  }
   
   .section-main {
     padding-top: 94px;
