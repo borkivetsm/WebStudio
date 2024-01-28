@@ -58,21 +58,20 @@
     justify-content: space-between;
   }
   
-  .site-nav-link:hover {
-    color: var(--header-web);
-  }
-  
-  .contact-link:hover {
-    color: var(--header-web);
-  }
-  
   .site-nav-link {
     color: var(--nav);
     font-weight: 500;
     font-size: 14px;
     position: relative;
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  .site-nav-link:hover {
+    color: var(--header-web);
+  }
+  
   .site-nav-link.current::after {
     content: '';
     display: block;
@@ -90,7 +89,15 @@
   
   .contact-link {
     color: var(--nav-number);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  .contact-link:hover {
+    color: var(--header-web);
+  }
+
   .contacts {
     font-size: 14px;
     font-weight: 500;
@@ -443,8 +450,7 @@
     background-color: var(--main-title);
     width: 270px;
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
-      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -705,12 +711,14 @@
   .portfolio-item {
     border: 1px solid var(--border-color);
     width: 370px;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .portfolio-item:hover,
   .portfolio-item:focus {
-    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
-      0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
   }
   
   .portfolio-title {
@@ -745,10 +753,14 @@
     width: 100%;
     padding: 63px 24px;
     opacity: 0;
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .portfolio-link:hover .product-action {
     opacity: 1;
+    
   }
   
   .section-main {
