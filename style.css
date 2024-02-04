@@ -11,6 +11,7 @@
     --footer-icon: #FFFFFF;
     --button: #f5f4fa;
     --border-color: #eee;
+    --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .container {
@@ -167,6 +168,9 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.20);
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: var(--transition-timing-function);
   }
   
   .backdrop.is-hidden {
@@ -753,14 +757,15 @@
     width: 100%;
     padding: 63px 24px;
     opacity: 0;
-    transition-property: opacity;
+    transition-property: opacity, transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(100%);
   }
 
   .portfolio-link:hover .product-action {
     opacity: 1;
-    
+    transform: translateY(0);
   }
   
   .section-main {
